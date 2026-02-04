@@ -6,8 +6,7 @@ export function middleware(request: NextRequest) {
 
   // Check if the path starts with /admin
   if (pathname.startsWith('/admin')) {
-    // In a real application, you would check for a session cookie or JWT
-    // For this basic route guard, we'll check for a placeholder 'auth-token'
+    // Check for an auth token in cookies
     const token = request.cookies.get('auth-token');
 
     if (!token) {

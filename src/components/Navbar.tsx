@@ -20,20 +20,24 @@ export default function Navbar() {
   const navLinks = [
     { name: 'Machines', href: '/machines' },
     { name: 'Process', href: '/process' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Services', href: '/services' },
+    { name: 'About', href: '/about' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'FAQ', href: '/faq' },
   ];
 
   return (
     <div className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4">
       <nav
         className={clsx(
-          'transition-all duration-300 border rounded-full px-6 py-2 flex items-center justify-between w-full max-w-4xl',
+          'transition-all duration-300 border rounded-full px-6 py-2 flex items-center justify-between w-full max-w-5xl',
           scrolled
             ? 'bg-white/80 backdrop-blur-md border-gray-200 shadow-lg'
             : 'bg-white/50 backdrop-blur-sm border-white/20 shadow-sm'
         )}
       >
-        <Link href="/" className="flex items-center gap-2 group">
+        <Link href="/" className="flex items-center gap-2 group shrink-0">
           <div className="p-1.5 bg-[#A24CDC] rounded-full group-hover:shadow-lg group-hover:shadow-[#A24CDC]/20 transition-all">
             <Cpu className="text-white w-5 h-5" />
           </div>
@@ -55,7 +59,7 @@ export default function Navbar() {
           ))}
           <Link
             href="/contact"
-            className="px-4 py-2 bg-[#A24CDC] text-white text-sm font-semibold rounded-full shadow-sm hover:brightness-110 hover:-translate-y-0.5 transition-all"
+            className="px-4 py-2 bg-[#A24CDC] text-white text-sm font-semibold rounded-full shadow-sm hover:brightness-110 hover:-translate-y-0.5 transition-all whitespace-nowrap"
           >
             Start Production
           </Link>

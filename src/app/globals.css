@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --radius: 0.5rem;
+}
+
+/* 
+ * PROJECT COLOR SCHEME (Tailwind Classes)
+ * ========================================
+ * Read this to maintain color consistency when editing!
+ * 
+ * Primary: purple-500 (buttons, links, active states)
+ * Secondary: lime-500 (secondary buttons, badges)
+ * Accent: pink-500 (highlights, hover states, accents)
+ * 
+ * Backgrounds:
+ *   - Main: bg-white
+ *   - Cards: bg-white
+ *   - Muted: bg-gray-100
+ * 
+ * Text:
+ *   - Main: text-gray-900
+ *   - Muted: text-gray-500
+ *   - On Primary: text-white
+ * 
+ * Borders: border-gray-200
+ * Destructive: bg-red-500 text-white
+ * 
+ * Mode: Light
+ */
+
+/* Hide Next.js error overlay portal */
+nextjs-portal {
+  display: none !important;
+}
+
+@utility animate-spin-slow {
+  animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+

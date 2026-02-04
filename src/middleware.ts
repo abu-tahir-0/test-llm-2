@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+  const { pathname, search } = request.nextUrl;
 
   // Check if the path starts with /admin
   if (pathname.startsWith('/admin')) {
@@ -12,8 +12,12 @@ export function middleware(request: NextRequest) {
     if (!token) {
       // Redirect to login if no token is found
       const loginUrl = new URL('/login', request.url);
-      // Store the original destination to redirect back after login
-      loginUrl.searchParams.set('from', pathname);
+      
+      // Store the original destination including query parameters to redirect back after login
+      // We use encodeURIComponent to ensure the 'from' parameter is correctly encoded
+      const fullPath = pathname + search;
+      loginUrl.searchParams.set('from', fullPath);
+      
       return NextResponse.redirect(loginUrl);
     }
   }

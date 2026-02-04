@@ -48,3 +48,12 @@ nextjs-portal {
   }
 }
 
+@layer components {
+  .floating-capsule {
+    @apply fixed bottom-8 left-1/2 -translate-x-1/2 z-50;
+    @apply px-6 py-3 rounded-full;
+    @apply bg-white/70 backdrop-blur-md border border-white/20;
+    @apply shadow-[0_8px_32px_0_rgba(31,38,135,0.15)];
+    @apply flex items-center gap-4;
+  }
+}

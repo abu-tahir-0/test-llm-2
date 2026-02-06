@@ -7,7 +7,7 @@ export default function ContactPage() {
   return (
     <div className="bg-white text-gray-900 min-h-screen">
       {/* Hero Section */}
-      <section className="pt-20 pb-12 bg-gray-50 border-b border-gray-200">
+      <section className="pt-32 pb-12 bg-gray-50 border-b border-gray-200">
         <div className="container mx-auto px-6 text-center">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
@@ -86,27 +86,15 @@ export default function ContactPage() {
               className="bg-white p-8 rounded-2xl border border-gray-200 shadow-xl shadow-gray-100"
             >
               <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label htmlFor="first-name" className="text-sm font-semibold text-gray-700">First Name</label>
-                    <input 
-                      type="text" 
-                      id="first-name"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#A24CDC] focus:ring-2 focus:ring-[#A24CDC]/20 outline-none transition-all"
-                      placeholder="John"
-                      required
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="last-name" className="text-sm font-semibold text-gray-700">Last Name</label>
-                    <input 
-                      type="text" 
-                      id="last-name"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#A24CDC] focus:ring-2 focus:ring-[#A24CDC]/20 outline-none transition-all"
-                      placeholder="Doe"
-                      required
-                    />
-                  </div>
+                <div className="space-y-2">
+                  <label htmlFor="name" className="text-sm font-semibold text-gray-700">Full Name</label>
+                  <input 
+                    type="text" 
+                    id="name"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#A24CDC] focus:ring-2 focus:ring-[#A24CDC]/20 outline-none transition-all"
+                    placeholder="John Doe"
+                    required
+                  />
                 </div>
 
                 <div className="space-y-2">
@@ -118,19 +106,6 @@ export default function ContactPage() {
                     placeholder="john@example.com"
                     required
                   />
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="subject" className="text-sm font-semibold text-gray-700">Subject</label>
-                  <select 
-                    id="subject"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#A24CDC] focus:ring-2 focus:ring-[#A24CDC]/20 outline-none transition-all bg-white"
-                  >
-                    <option>General Inquiry</option>
-                    <option>Product Demo</option>
-                    <option>Technical Support</option>
-                    <option>Partnership</option>
-                  </select>
                 </div>
 
                 <div className="space-y-2">

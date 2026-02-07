@@ -56,9 +56,12 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
           <p>© {new Date().getFullYear()} Apex Machina Inc. All rights reserved.</p>
-          <div className="flex gap-6 mt-4 md:mt-0">
-            <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-white">Terms of Service</Link>
+          <div className="flex flex-wrap justify-center gap-6 mt-4 md:mt-0">
+            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link href="/cookies" className="hover:text-white transition-colors">Cookie Policy</Link>
+            <Link href="/shipping" className="hover:text-white transition-colors">Shipping</Link>
+            <Link href="/returns" className="hover:text-white transition-colors">Returns</Link>
           </div>
         </div>
       </div>

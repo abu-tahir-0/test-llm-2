@@ -10,7 +10,7 @@ export async function POST(request: Request) {
       // In a real application, you would use a secure JWT or session ID
       // For this task, we'll set a simple session cookie
       const cookieStore = await cookies();
-      cookieStore.set('session', 'admin-session-token', {
+      cookieStore.set('auth-token', 'admin-session-token', {
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
         sameSite: 'lax',
